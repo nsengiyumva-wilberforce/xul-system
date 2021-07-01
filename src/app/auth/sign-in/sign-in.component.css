@@ -1,0 +1,11 @@
+form{
+    border-top: 4px solid blue;
+}
+.select{
+    display: flex;
+    flex-direction: row;
+}
+.select>select{
+    width: 81%;
+    margin-left: 12px;
+}

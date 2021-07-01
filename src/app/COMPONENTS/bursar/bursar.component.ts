@@ -25,6 +25,8 @@ export class BursarComponent implements OnInit {
   public lineChartLegend = true;
   public lineChartType = 'line';
   public lineChartPlugins = [];
+
+  message: string;
   constructor() { }
   ngOnInit(): void {
   }
