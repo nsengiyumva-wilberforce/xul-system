@@ -1,0 +1,47 @@
+<!--Navigation Section-->
+
+<div class="main mt-5 mb-3 ms-5 me-5 pb-5 border border-primary">
+  <h1 class="text-center text-primary">XUL-MANAGER</h1>
+<div class="home mb-3">
+  <div class="welcome_banner container mt-5">
+    <img src="../assets/images/banner.jpg" class="img-fluid" alt="banner">
+  </div>
+<div class="d-grid gap-2 container mt-5">
+  <button class="btn btn-primary" type="button" routerLink = "/director">DIRECTOR</button>
+  <button class="btn btn-primary" type="button" routerLink = "/headmaster">HEADMASTER</button>
+  <button class="btn btn-primary" type="button" routerLink = "/dos">DIRECTOR OF STUDIES</button>
+  <button class="btn btn-primary" type="button" routerLink = "/class-teacher">CLASS TEACHER</button>
+  <button class="btn btn-primary" type="button" routerLink = "/bursar">BURSAR</button>
+</div>
+</div>
+<!--Login Form-->
+
+<form class="container">
+  <p class="text-center fw-bold text-primary">Sign In</p>
+  <div class="row mb-3 pt-2">
+    <label for="inputEmail3" class="col-sm-2 col-form-label text-white fw-bold">USERNAME</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputPassword3" class="col-sm-2 col-form-label text-white fw-bold">PASSWORD</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3">
+    </div>
+  </div>
+  <div class="row mb-3 select">
+    <label class="col-sm-2 col-form-label text-white fw-bold" for="specificSizeSelect">PREFERENCE</label>
+    <select class="form-select" id="specificSizeSelect">
+      <option selected>Choose...</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+  <div class="d-grid gap-2 col-6 mx-auto pb-3">
+    <button class="btn bg-dark text-white" type="button">LOGIN</button>
+  </div>
+</form>
+</div>
+

@@ -1,0 +1,30 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.home{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+    }
+.welcome_banner{
+    width: 60%;
+    height: 60%;
+}
+.welcome_banner>img{
+height: auto;
+width: 100%;
+border-radius: 5px;
+border: 2px solid blue;
+}
+form{
+    border-top: 4px solid blue;
+}
+.select{
+    display: flex;
+    flex-direction: row;
+}
+.select>select{
+    width: 81%;
+    margin-left: 12px;
+}
