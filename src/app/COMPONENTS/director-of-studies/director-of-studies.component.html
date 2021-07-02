@@ -15,6 +15,9 @@
           <li class="nav-item text-light">
             <a class="nav-link text-light" href="#">Classes</a>
           </li>
+          <li class="nav-item text-light">
+            <a class="nav-link text-light" routerLink = "/events">Events</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link text-light" href="#">Constraints</a>
           </li>
@@ -22,6 +25,17 @@
       </div>
     </div>
   </nav>
+  <router-outlet></router-outlet>
+ 
+   <form [formGroup]="newEvent" (ngSubmit) = "addEvent()">
+<input type="text" formControlName="event">
+<input type="date" formControlName="date">
+<input type="submit" value="submit">
+   </form>
+  
+  
   <div class="container calendar">
     <full-calendar [options]="calendarOptions"></full-calendar>
   </div>
+  
+  

@@ -12,6 +12,7 @@ import { allIcons } from 'angular-feather/icons';
 import { FeatherModule } from 'angular-feather';
 import { HeaderComponent } from './header/header.component';
 import { BursarComponent } from './bursar.component';
+import { EventsComponent } from '../director-of-studies/events/events.component';
 @NgModule({
   declarations: [
     EmployeesComponent,
@@ -20,7 +21,8 @@ import { BursarComponent } from './bursar.component';
     IntegrationsComponent,
     ReportsComponent,
     HeaderComponent,
-    BursarComponent
+    BursarComponent,
+    EventsComponent
   ],
   imports: [
     CommonModule,

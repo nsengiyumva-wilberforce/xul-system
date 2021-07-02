@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-import { HttpClient } from '@angular/common/http';
 import { CalendarOptions } from '@fullcalendar/angular';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-director-of-studies',
@@ -10,33 +9,30 @@ import { CalendarOptions } from '@fullcalendar/angular';
 })
 export class DirectorOfStudiesComponent implements OnInit {
 
-  Events = [];
-    calendarOptions: CalendarOptions;
+  constructor() { }
 
-  constructor(private httpClient: HttpClient) { }
+  newEvent = new FormGroup({
+    event: new FormControl(''),
+    date: new FormControl(''),
+  });
 
-  // tslint:disable-next-line:typedef
-  onDateClick(res) {
-    alert('Clicked on date : ' + res.dateStr);
-  }
+      calendarOptions: CalendarOptions = {
+          initialView: 'dayGridMonth',
+          dateClick: this.handleDateClick.bind(this),
+          events: [
+            { event: String(JSON.parse(localStorage.getItem('data')).event), date: String(JSON.parse(localStorage.getItem('data')).date)}
+          ]
+        };
 
+        addEvent(): void{
+localStorage.setItem('data', JSON.stringify(this.newEvent.value));
+
+        }
   // tslint:disable-next-line:typedef
   ngOnInit(){
-    setTimeout(() => {
-      return this.httpClient.get('http://localhost:8888/event.php')
-        .subscribe(res => {
-            this.Events.push(res);
-            console.log(this.Events);
-        });
-    }, 2200);
+        }
 
-    setTimeout(() => {
-      this.calendarOptions = {
-        initialView: 'dayGridMonth',
-        dateClick: this.onDateClick.bind(this),
-        events: this.Events
-      };
-    }, 2500);
-  }
-
+        handleDateClick(arg): void {
+          alert('date click! ' + arg.dateStr);
+        }
 }
