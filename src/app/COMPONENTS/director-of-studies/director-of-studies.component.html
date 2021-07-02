@@ -1,1 +1,27 @@
-<p>director-of-studies works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">XUL-MANAGER</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav me-5 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Time Table</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Teachers</a>
+          </li>
+          <li class="nav-item text-light">
+            <a class="nav-link text-light" href="#">Classes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Constraints</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container calendar">
+    <full-calendar [options]="calendarOptions"></full-calendar>
+  </div>

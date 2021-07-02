@@ -1,22 +1,22 @@
 <!--Login Form-->
 
 <form class="container">
-    <p class="text-center fw-bold text-primary">Sign In</p>
+  <p class="text-center fw-bold text-primary">Sign In</p>
     <div class="row mb-3 pt-2">
       <label for="inputEmail3" class="col-sm-2 col-form-label text-white fw-bold">USERNAME</label>
       <div class="col-sm-10">
-        <input type="email" class="form-control" id="inputEmail3">
+        <input type="email" class="form-control" id="inputEmail3" [formControl]="username">
       </div>
     </div>
     <div class="row mb-3">
       <label for="inputPassword3" class="col-sm-2 col-form-label text-white fw-bold">PASSWORD</label>
       <div class="col-sm-10">
-        <input type="password" class="form-control" id="inputPassword3">
+        <input type="password" class="form-control" id="inputPassword3" [formControl]="password">
       </div>
     </div>
     <div class="row mb-3 select">
       <label class="col-sm-2 col-form-label text-white fw-bold" for="specificSizeSelect">PREFERENCE</label>
-      <select class="form-select" id="specificSizeSelect">
+      <select class="form-select" id="specificSizeSelect" [formControl]="preference">
         <option selected>Choose...</option>
         <option value="1">One</option>
         <option value="2">Two</option>
@@ -24,6 +24,7 @@
       </select>
     </div>
     <div class="d-grid gap-2 col-6 mx-auto pb-3">
-      <button class="btn bg-dark text-white" type="button">LOGIN</button>
+      <button class="btn bg-dark text-white" type="button" (click)="login()">LOGIN</button>
     </div>
   </form>
+  <button (click)="goback()" class="me-5">Back</button> 
