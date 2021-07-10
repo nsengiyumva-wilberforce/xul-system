@@ -12,7 +12,6 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'class-teacher', component: ClassTeacherComponent},
   { path: 'director', component: DirectorComponent},
-  { path: 'headmaster', component : HeadmasterComponent },
   { path: 'sign-in', component: SignInComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: HomeComponent}

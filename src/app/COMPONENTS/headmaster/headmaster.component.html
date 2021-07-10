@@ -1,1 +1,61 @@
-<p>headmaster works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">XUL-MANAGER</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav me-5 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Teachers Database</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Teachers Roles</a>
+          </li>
+          <li class="nav-item text-light">
+            <a class="nav-link text-light" href="#">School Assets</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container text-center">
+      <h1>TEACHERS' DATABASE</h1>
+  </div>
+  <div class="main_body">
+  <div class="register">
+      <h5>Registration Form</h5>
+      <form>
+      <input type="text" placeholder="First Name" name="fname" [(ngModel)]="userObj.fname">
+      <input type="text" placeholder="Last Name" name="lname" [(ngModel)]="userObj.lname">
+      <input type="text" placeholder="class" name="class" [(ngModel)]="userObj.class">
+      <input type="text" placeholder="Role" name="role" [(ngModel)]="userObj.role">
+      <input type="text" placeholder="Salary" name="salary" [(ngModel)]="userObj.salary">
+      <input type="submit" value="Add" class="btn-primary" (click)="addTeacher(userObj)">
+    </form>
+  </div>
+  <div class="container">
+          <table>
+              <thead>
+                  <tr>
+                    <th>#</th>
+                      <th>fname</th>
+                      <th>lname</th>
+                      <th>Class</th>
+                      <th>Role</th>
+                      <th>Salary</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let teacher of teachers">
+                    <td>{{teacher.id}}</td>
+                      <td>{{teacher.fname}}</td>
+                      <td>{{teacher.lname}}</td>
+                      <td>{{teacher.class}}</td>
+                      <td>{{teacher.role}}</td>
+                      <td>{{teacher.salary}}</td>
+                  </tr>
+              </tbody>
+          </table>
+  </div>
+</div>

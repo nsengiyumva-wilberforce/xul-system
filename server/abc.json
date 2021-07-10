@@ -1,0 +1,57 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "fname": "Nsenga",
+      "lname": "wilber",
+      "class": "s.1",
+      "role": "DOS",
+      "salary": 2000000
+    },
+    {
+      "sn": 0,
+      "fname": "wilber",
+      "lname": "Enock",
+      "class": "s.5",
+      "role": "Sports Teacher",
+      "salary": "4555",
+      "id": 2
+    },
+    {
+      "sn": 0,
+      "fname": "manishimwe ",
+      "lname": "Enock",
+      "class": "s.8",
+      "role": "Sports Teacher",
+      "salary": "400, 000",
+      "id": 3
+    },
+    {
+      "sn": 0,
+      "fname": "manishimwe ",
+      "lname": "Enock",
+      "class": "s.8",
+      "role": "Sports Teacher",
+      "salary": "400, 000",
+      "id": 4
+    },
+    {
+      "sn": 0,
+      "fname": "NSENGIYUMVA",
+      "lname": "WILBERFORCE",
+      "class": "s.5",
+      "role": "Sports Teacher",
+      "salary": "6000000",
+      "id": 5
+    },
+    {
+      "sn": 0,
+      "fname": "Irankunda",
+      "lname": "Brendah",
+      "class": "p.4",
+      "role": "Sports Teacher",
+      "salary": "30000",
+      "id": 6
+    }
+  ]
+}

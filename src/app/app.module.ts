@@ -17,6 +17,9 @@ import { DirectorModule } from './COMPONENTS/director/director.module';
 import { DirectorOfStudiesModule } from './COMPONENTS/director-of-studies/director-of-studies.module';
 import { HeadmasterModule } from './COMPONENTS/headmaster/headmaster.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -38,6 +41,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeadmasterModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   exports: [
     FeatherModule
