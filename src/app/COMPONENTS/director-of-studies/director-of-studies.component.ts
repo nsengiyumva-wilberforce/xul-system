@@ -20,13 +20,14 @@ export class DirectorOfStudiesComponent implements OnInit {
           initialView: 'dayGridMonth',
           dateClick: this.handleDateClick.bind(this),
           events: [
-            { event: String(JSON.parse(localStorage.getItem('data')).event), date: String(JSON.parse(localStorage.getItem('data')).date)}
+            { title: JSON.parse(localStorage.getItem('data')).event, date: JSON.parse(localStorage.getItem('data')).date }
+            // {event: 'Going to see bae', date: '2021-07-12'},
+            // { event: String(JSON.parse(localStorage.getItem('data')).event), date: String(JSON.parse(localStorage.getItem('data')).date)}
           ]
         };
 
         addEvent(): void{
 localStorage.setItem('data', JSON.stringify(this.newEvent.value));
-
         }
   // tslint:disable-next-line:typedef
   ngOnInit(){

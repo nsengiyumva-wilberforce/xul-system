@@ -10,47 +10,11 @@
     </tr>
     </thead>
     <tbody>
-        <tr>
-        <td>1900712163</td>
-        <td>Nsengiyumva Wilberforce</td>
-        <td>s.3</td>
-        <td>1200000</td>
-    </tr>
-    <tr>
-        <td>1900712163</td>
-        <td>Nsengiyumva Wilberforce</td>
-        <td>s.3</td>
-        <td>1200000</td>
-    </tr>
-    <tr>
-        <td>1900712163</td>
-        <td>Nsengiyumva Wilberforce</td>
-        <td>s.3</td>
-        <td>1200000</td>
-    </tr>
-    <tr>
-        <td>1900712163</td>
-        <td>Nsengiyumva Wilberforce</td>
-        <td>s.3</td>
-        <td>1200000</td>
-    </tr>
-    <tr>
-        <td>1900712163</td>
-        <td>Nsengiyumva Wilberforce</td>
-        <td>s.3</td>
-        <td>1200000</td>
-    </tr>
-    <tr>
-        <td>1900712163</td>
-        <td>Nsengiyumva Wilberforce</td>
-        <td>s.3</td>
-        <td>1200000</td>
-    </tr>
-    <tr>
-        <td>1900712163</td>
-        <td>Nsengiyumva Wilberforce</td>
-        <td>s.3</td>
-        <td>1200000</td>
+        <tr *ngFor="let fee of fees">
+        <td>{{fee.regno}}</td>
+        <td>{{fee.name}}</td>
+        <td>{{fee.class}}</td>
+        <td>{{fee.fees}}</td>
     </tr>
     </tbody>
   </table>
@@ -59,22 +23,22 @@
     <div class="bg-primary p-4">
         <form>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Reg No</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="regno" class="form-label">Reg No</label>
+              <input type="text" class="form-control" id="regno" name = "regno" [(ngModel)]="feesObj.regno">
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Full Name</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" name = "name" [(ngModel)]="feesObj.name">
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Class</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="class" class="form-label">Class</label>
+              <input type="text" class="form-control" id="class" name = "class" [(ngModel)]="feesObj.class">
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Fees</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="fees" class="form-label">Fees</label>
+              <input type="text" class="form-control" id="fees" name = "fees" [(ngModel)]="feesObj.fees">
             </div>
-            <button type="submit" class="btn btn-secondary">Submit</button>
+            <button class="btn btn-secondary" (click)="addFees(feesObj)">Submit</button>
           </form>
     </div>
   </div>
@@ -86,7 +50,5 @@
         ADD A NEW RECORD
       </button>
     </div>
-  </nav>
-
- 
+  </nav> 
 </div>

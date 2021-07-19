@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { BursarRoutingModule } from './bursar-routing.module';
 import { EmployeesComponent } from './employees/employees.component';
@@ -29,6 +31,8 @@ import { EventsComponent } from '../director-of-studies/events/events.component'
     ChartsModule,
     FeatherModule.pick(allIcons),
     BursarRoutingModule,
+    HttpClientModule,
+    FormsModule
 
   ],
   exports: [

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
+import { AuthService } from 'src/app/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bursar',
@@ -27,8 +29,13 @@ export class BursarComponent implements OnInit {
   public lineChartPlugins = [];
 
   message: string;
-  constructor() { }
+  constructor(public authService: AuthService, public router: Router) { }
   ngOnInit(): void {
+  }
+
+  logout(): void{
+    this.authService.logout();
+    this.router.navigate(['/home']);
   }
 
   }

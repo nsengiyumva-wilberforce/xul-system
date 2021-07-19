@@ -19,6 +19,7 @@ apiUrl = 'http://localhost:3000/teachers';
       'Content-Type': 'application/json'
     })
   };
+  // GET data
 // Fetch all teachers from the fake server
 getTeachers(): Observable<Teacher[]>{
   return this.http.get<Teacher[]>(this.apiUrl);
@@ -28,5 +29,6 @@ getTeachers(): Observable<Teacher[]>{
 addTeacher(data): Observable<Teacher>{
   return this.http.post<Teacher>(this.apiUrl, JSON.stringify(data), this.httpOptions);
 }
+// Add a student
 
   }

@@ -4,11 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { HeadmasterRoutingModule } from './headmaster-routing.module';
+import { TeachersComponent } from './teachers/teachers.component';
+import { RegisterComponent } from './register/register.component';
+import { RolesComponent } from './roles/roles.component';
+import { SchoolAssetsComponent } from './school-assets/school-assets.component';
 
 
 
 @NgModule({
   declarations: [
+    TeachersComponent,
+    RegisterComponent,
+    RolesComponent,
+    SchoolAssetsComponent
   ],
   imports: [
     CommonModule,

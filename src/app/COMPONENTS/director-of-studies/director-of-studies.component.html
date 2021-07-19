@@ -25,15 +25,15 @@
       </div>
     </div>
   </nav>
-  <router-outlet></router-outlet>
  
+  <div class="addEvent">
    <form [formGroup]="newEvent" (ngSubmit) = "addEvent()">
-<input type="text" formControlName="event">
+<input type="text" formControlName="event" placeholder="Event Name">
 <input type="date" formControlName="date">
 <input type="submit" value="submit">
    </form>
-  
-  
+  </div>
+
   <div class="container calendar">
     <full-calendar [options]="calendarOptions"></full-calendar>
   </div>

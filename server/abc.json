@@ -52,6 +52,74 @@
       "role": "Sports Teacher",
       "salary": "30000",
       "id": 6
+    },
+    {
+      "sn": 0,
+      "fname": "Nsengiyumva",
+      "lname": "Wilberforce",
+      "class": "s.5",
+      "role": "Literature Pro",
+      "salary": "200000",
+      "id": 7
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "fname": "Ayebare",
+      "lname": "Prossy",
+      "mname": "",
+      "gender": "female",
+      "regno": "19/U/12163/PS",
+      "passport": "abc.jg",
+      "subject": "Physics",
+      "phone": "077777777"
+    }
+  ],
+  "fees": [
+    {
+      "id": 1,
+      "regno": "19/U/12163/PS",
+      "name": "Wilber nsenga",
+      "class": "s.1",
+      "fees": 1000000
+    },
+    {
+      "regno": "19/U/1256/EVE",
+      "name": "Nakyanzi Catheriine",
+      "class": "s.6",
+      "fees": "3000000",
+      "id": 2
+    },
+    {
+      "regno": "18/U/12163/PS",
+      "name": "Manishimwe Enock",
+      "class": "s.3",
+      "fees": "4000000",
+      "id": 3
+    },
+    {
+      "regno": "16/U/11111/PS",
+      "name": "Rutanana Arnold",
+      "class": "s.5",
+      "fees": "1000000",
+      "id": 4
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Nakyanzi Catheriine",
+      "role": "DOS",
+      "class": "s.1",
+      "salary": "200000"
+    },
+    {
+      "name": "Kibanda",
+      "role": "Sports Teacher",
+      "class": "s.5",
+      "salary": "300000",
+      "id": 2
     }
   ]
 }
