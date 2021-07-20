@@ -9,7 +9,8 @@ import { AuthGuard } from 'src/app/auth/auth.guard';
 import { BursarComponent } from './bursar.component';
 
 const heroRoutes: Routes = [
-  { path: 'bursar', component: BursarComponent, canActivate: [AuthGuard]},
+  { path: 'bursar', component: BursarComponent, canActivate: [AuthGuard],
+},
   { path: 'fees', component: FeesComponent },
   { path: 'employees', component: EmployeesComponent },
   { path: 'expenditures', component: ExpendituresComponent },

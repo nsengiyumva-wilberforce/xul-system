@@ -121,5 +121,31 @@
       "salary": "300000",
       "id": 2
     }
+  ],
+  "expenditure": [
+    {
+      "item": "Uniforms",
+      "quantity": "300",
+      "price": "36000000",
+      "id": 1
+    },
+    {
+      "item": "Love",
+      "quantity": "30",
+      "price": "600000",
+      "id": 2
+    },
+    {
+      "item": "Tree",
+      "quantity": "25",
+      "price": "5000000",
+      "id": 3
+    },
+    {
+      "item": "box",
+      "quantity": "45",
+      "price": "450000",
+      "id": 4
+    }
   ]
 }

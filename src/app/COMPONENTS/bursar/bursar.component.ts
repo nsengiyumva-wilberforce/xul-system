@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class BursarComponent implements OnInit {
 
   public lineChartData: ChartDataSets[] = [
-    { data: [15339, 21345, 18483, 24003, 23489, 24092, 12034], label: 'Series A' },
+    { data: [20, 30, 70, 80, 100, 65], label: 'expenditures' },
   ];
 
   public lineChartLabels: Label[] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
