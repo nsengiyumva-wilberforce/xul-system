@@ -10,8 +10,6 @@ import { SignOutComponent } from './auth/sign-out/sign-out.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './PAGES/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FeatherModule } from 'angular-feather';
-import { BursarModule } from './COMPONENTS/bursar/bursar.module';
 import { ClassTeacherModule } from './COMPONENTS/class-teacher/class-teacher.module';
 import { DirectorModule } from './COMPONENTS/director/director.module';
 import { DirectorOfStudiesModule } from './COMPONENTS/director-of-studies/director-of-studies.module';
@@ -34,7 +32,6 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    BursarModule,
     ClassTeacherModule,
     DirectorModule,
     DirectorOfStudiesModule,
@@ -45,7 +42,6 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule
   ],
   exports: [
-    FeatherModule
   ],
   providers: [],
   bootstrap: [AppComponent]

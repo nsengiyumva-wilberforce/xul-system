@@ -15,24 +15,26 @@ import { FeatherModule } from 'angular-feather';
 import { HeaderComponent } from './header/header.component';
 import { BursarComponent } from './bursar.component';
 import { EventsComponent } from '../director-of-studies/events/events.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   declarations: [
+    BursarComponent,
     EmployeesComponent,
     ExpendituresComponent,
     FeesComponent,
     IntegrationsComponent,
     ReportsComponent,
     HeaderComponent,
-    BursarComponent,
-    EventsComponent
+    EventsComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,
     ChartsModule,
     FeatherModule.pick(allIcons),
-    BursarRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BursarRoutingModule,
 
   ],
   exports: [

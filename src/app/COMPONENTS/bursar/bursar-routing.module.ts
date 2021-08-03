@@ -7,20 +7,32 @@ import { IntegrationsComponent } from './integrations/integrations.component';
 import { ReportsComponent } from './reports/reports.component';
 import { AuthGuard } from 'src/app/auth/auth.guard';
 import { BursarComponent } from './bursar.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
-const heroRoutes: Routes = [
-  { path: 'bursar', component: BursarComponent, canActivate: [AuthGuard],
-},
-  { path: 'fees', component: FeesComponent },
-  { path: 'employees', component: EmployeesComponent },
-  { path: 'expenditures', component: ExpendituresComponent },
-  { path: 'reports', component: ReportsComponent },
-  { path: 'integrations', component: IntegrationsComponent },
+const bursarRoutes: Routes = [
+  {
+  path: '',
+  component: BursarComponent,
+  // guard
+  children: [
+{
+  path: '',
+  children: [
+    { path: 'fees', component: FeesComponent },
+    { path: 'employees', component: EmployeesComponent },
+    { path: 'expenditures', component: ExpendituresComponent },
+    { path: 'reports', component: ReportsComponent },
+    { path: 'integrations', component: IntegrationsComponent },
+    { path: '', component: DashboardComponent }
+  ]
+}
+    ]
+  }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forChild(heroRoutes)],
+    RouterModule.forChild(bursarRoutes)],
   exports: [RouterModule]
 })
 export class BursarRoutingModule { }

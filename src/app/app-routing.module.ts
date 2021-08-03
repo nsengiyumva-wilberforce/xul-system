@@ -10,11 +10,12 @@ import { SignInComponent } from './auth/sign-in/sign-in.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'bursar', loadChildren: () => import('./COMPONENTS/bursar/bursar.module').then(m => m.BursarModule)},
   { path: 'class-teacher', component: ClassTeacherComponent},
   { path: 'director', component: DirectorComponent},
   { path: 'sign-in', component: SignInComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', component: HomeComponent}
+  { path: '**', component: HomeComponent }
 ];
 
 

@@ -16,37 +16,37 @@
         <div class="position-sticky pt-3">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link text-light" aria-current="page" routerLink="/bursar">
+              <a class="nav-link text-light" aria-current="page" [routerLink]="['./']" routerLinkActive="active">
                 <i-feather name="home"></i-feather>
                 Dashboard
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" routerLink="/fees">
+              <a class="nav-link text-light" [routerLink]="['./fees']" routerLinkActive="active">
                 <i-feather name="file"></i-feather>
                 School Fees
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" routerLink="/employees">
+              <a class="nav-link text-light" [routerLink]="['./employees']" routerLinkActive="active">
                 <i-feather name="shopping-cart"></i-feather>
                 Employees
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" routerLink="/expenditures">
+              <a class="nav-link text-light" [routerLink]="['./expenditures']" routerLinkActive="active">
                 <i-feather name="users"></i-feather>
                 Expenditures
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" routerLink="/reports">
+              <a class="nav-link text-light" [routerLink]="['./reports']" routerLinkActive="active">
                 <i-feather name="bar-chart-2"></i-feather>
                 Reports
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" routerLink="/integrations">
+              <a class="nav-link text-light" [routerLink]="['./integrations']" routerLinkActive="active">
                 <i-feather name="layers"></i-feather>
                 Integrations
               </a>
