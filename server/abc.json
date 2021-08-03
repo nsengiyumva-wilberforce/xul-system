@@ -68,12 +68,47 @@
       "id": 1,
       "fname": "Ayebare",
       "lname": "Prossy",
-      "mname": "",
+      "mname": "wilber",
       "gender": "female",
       "regno": "19/U/12163/PS",
-      "passport": "abc.jg",
-      "subject": "Physics",
+      "passport": "abc.jpg",
+      "subjects": "Physics",
       "phone": "077777777"
+    },
+    {
+      "fname": "Nsengiyumva",
+      "lname": "Wilberforce",
+      "mname": "Prossy",
+      "gender": "male",
+      "regno": "19/U/12163/PS",
+      "photo": "C:\\fakepath\\jesus.jpg",
+      "subject": [],
+      "phoneNumber": "0776847377",
+      "id": 2
+    },
+    {
+      "fname": "Ayebare",
+      "lname": "Prossy",
+      "mname": "Wilberforce",
+      "gender": "female",
+      "regno": "19/U/123455/PS",
+      "photo": "C:\\fakepath\\kmf.jpg",
+      "subject": [
+        ""
+      ],
+      "phoneNumber": "0786201108",
+      "id": 3
+    },
+    {
+      "fname": "Manishimwe ",
+      "lname": "Enock",
+      "mname": "Shallon",
+      "gender": "male",
+      "regno": "gfgffgfgfg",
+      "photo": "C:\\fakepath\\attendance.PNG",
+      "subject": true,
+      "phoneNumber": "78889999",
+      "id": 4
     }
   ],
   "fees": [
@@ -140,12 +175,6 @@
       "quantity": "25",
       "price": "5000000",
       "id": 3
-    },
-    {
-      "item": "box",
-      "quantity": "45",
-      "price": "450000",
-      "id": 4
     }
   ]
 }

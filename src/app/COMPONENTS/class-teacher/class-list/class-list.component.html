@@ -1,0 +1,24 @@
+<h3 class="text-center">{{title}}</h3>
+<div class="flex-row container" *ngFor="let student of students">
+    <div class="profile d-flex flex-row mb-3">
+        <div class="id me-0 pt-2">
+            <p>{{student.regno}}</p>
+        </div>
+        <div class="name p-3" (click)="showProfile = !showProfile">
+        <div class="fname me-3">
+            <p>{{student.fname}}</p>
+        </div>
+        <div class="lname">
+            <p>{{student.lname}}</p>
+        </div>
+    </div>
+    </div>
+</div>
+<app-student-profile *ngIf="showProfile">
+
+</app-student-profile>
+
+
+
+
+

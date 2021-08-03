@@ -1,0 +1,17 @@
+.id{
+    background-color: black;
+    color: white;
+    width: 120px;
+}
+.id:hover{
+    margin-left: .5rem;
+    background-color: lightslategray;
+}
+.name{
+    display: flex;
+    flex-direction: row;
+    background-color: lightslategray;
+    width: 260px;  
+    color: white;
+}
+

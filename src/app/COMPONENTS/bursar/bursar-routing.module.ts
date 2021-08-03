@@ -13,7 +13,7 @@ const bursarRoutes: Routes = [
   {
   path: '',
   component: BursarComponent,
-  // guard
+  canActivate: [AuthGuard],
   children: [
 {
   path: '',
