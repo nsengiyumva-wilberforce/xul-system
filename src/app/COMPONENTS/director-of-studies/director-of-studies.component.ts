@@ -20,7 +20,7 @@ export class DirectorOfStudiesComponent implements OnInit {
           initialView: 'dayGridMonth',
           dateClick: this.handleDateClick.bind(this),
           events: [
-            { title: JSON.parse(localStorage.getItem('data')).event, date: JSON.parse(localStorage.getItem('data')).date }
+            { title: 'EVENT1', date: '2021-08-09' }
             // {event: 'Going to see bae', date: '2021-07-12'},
             // { event: String(JSON.parse(localStorage.getItem('data')).event), date: String(JSON.parse(localStorage.getItem('data')).date)}
           ]

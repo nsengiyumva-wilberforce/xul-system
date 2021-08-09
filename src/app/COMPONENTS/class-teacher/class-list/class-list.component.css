@@ -1,3 +1,6 @@
+.main-body{
+    width: 800px;
+}
 .id{
     background-color: black;
     color: white;
@@ -14,4 +17,10 @@
     width: 260px;  
     color: white;
 }
+.selected{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+
 

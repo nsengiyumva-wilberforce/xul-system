@@ -1,0 +1,21 @@
+table{
+  width: 80%;
+}
+.special-td{
+    padding: 0 0;
+    height: 30px;
+    color: rgb(226, 213, 156);
+    color: gray;
+}
+.mark-input{
+  border: 0px;
+  background: inherit;
+  width: 120px;
+  margin: 0 1px;
+}
+.mark-input:focus{
+  border: 0px;
+}
+p{
+  color: rgb(226, 213, 156);
+}

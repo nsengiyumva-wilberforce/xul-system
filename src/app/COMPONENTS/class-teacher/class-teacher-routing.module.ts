@@ -6,7 +6,6 @@ import { ClassListComponent } from './class-list/class-list.component';
 import { ClassTeacherComponent } from './class-teacher.component';
 import { MarksComponent } from './marks/marks.component';
 import { RegisterComponent } from './register/register.component';
-import { StudentProfileComponent } from './student-profile/student-profile.component';
 
 const routes: Routes = [
   {

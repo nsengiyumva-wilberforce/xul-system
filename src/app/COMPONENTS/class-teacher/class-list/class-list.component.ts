@@ -8,7 +8,7 @@ import { ClassTeacherService } from '../class-teacher.service';
 })
 export class ClassListComponent implements OnInit {
   title = 'CLASS-LIST';
-  showProfile = false;
+  selectedStudent;
   students: any[] = [];
 
   constructor(private classTeacherService: ClassTeacherService) { }
@@ -19,6 +19,10 @@ export class ClassListComponent implements OnInit {
 fetchStudents(): void{
 this.classTeacherService.getStudents()
   .subscribe(arg => this.students = arg);
+}
+onSelect(student): void{
+this.selectedStudent = student;
+console.log(this.selectedStudent);
 }
 
 }

@@ -1,103 +1,50 @@
   <div class="main">
   <h1>Student registration</h1>
+  <form [formGroup] = "studentReg" (ngSubmit) = "addStudents(studentReg)">
     <table>
       <tr>
         <td>
-        <input type="text" class="form-control" placeholder="First name" name="fname" [(ngModel)]="studentObj.fname">
+        <input type="text" class="form-control" placeholder="First name" name="fname" formControlName="fname">
         </td>
       <td>
-        <input type="text" class="form-control" placeholder="Last name" name="lname" [(ngModel)]="studentObj.lname">
+        <input type="text" class="form-control" placeholder="Last name" name="lname" formControlName="lname">
       </td>
       <td>
-        <input type="text" class="form-control" placeholder="Middle name" name="mname" [(ngModel)]="studentObj.mname">
+        <input type="text" class="form-control" placeholder="Middle name" name="mname" formControlName="mname">
       </td>
     </tr>
     <tr>
       <td class="gender">
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="gender" id="male" value="male" [(ngModel)]="studentObj.gender">
+          <input class="form-check-input" type="radio" name="gender" id="male" value="male" formControlName="gender">
           <label class="form-check-label" for="male">Male</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="gender" id="female" value="female" [(ngModel)]="studentObj.gender">
+          <input class="form-check-input" type="radio" name="gender" id="female" value="female" formControlName="gender">
           <label class="form-check-label" for="female">Female</label>
         </div>
       </td>
       <td class="regNo">
-        <input class="form-control" type="text" placeholder="Registration Number" name="regno" [(ngModel)]="studentObj.regno">
+        <input class="form-control" type="text" placeholder="Registration Number" name="regno" formControlName="regno">
       </td>
       <td class="photo">
         <div class="form-group">
           <label for="passport">Passport Photo</label>
-          <input type="file" class="form-control-file" id="passport" name = "photo" [(ngModel)]="studentObj.photo">
+          <input type="file" class="form-control-file" id="passport" name = "photo" formControlName="photo">
         </div>
       </td>
     </tr>
     <tr>
       <td class="subjects">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="physics" id="physics" name = "subject" [(ngModel)]="studentObj.subject">
-          <label class="form-check-label" for="physics">
-            Physics
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="chemistry" id="chemistry" name = "subject" [(ngModel)]="studentObj.subject">
-          <label class="form-check-label" for="chemistry">
-            Chemistry
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="biology" id="biology" name = "subject" [(ngModel)]="studentObj.subject">
-          <label class="form-check-label" for="defaultCheck1">
-            Biology
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="mathematics" id="mathematics" name = "subject" [(ngModel)]="studentObj.subject">
-          <label class="form-check-label" for="mathematics">
-            Mathematics
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="history" id="history" name = "subject" [(ngModel)]="studentObj.subject">
-          <label class="form-check-label" for="history">
-            History
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="economics" id="economics" name = "subject" [(ngModel)]="studentObj.subject">
-          <label class="form-check-label" for="economics">
-            Economics
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="geography" id="geography" name = "subject" [(ngModel)]="studentObj.subject">
-          <label class="form-check-label" for="geography">
-            Geography
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="divinity" id="divinity" name = "subject" [(ngModel)]="studentObj.subject">
-          <label class="form-check-label" for="divinity">
-            Divinity
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="art" id="art" name = "subject" [(ngModel)]="studentObj.subject">
-          <label class="form-check-label" for="art">
-            Fine Art
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="literature" id="literature" name = "subject" [(ngModel)]="studentObj.subject">
-          <label class="form-check-label" for="literature">
-            Literature In English
+        <div class="form-check" *ngFor="let data of Data; let i = index">
+          <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name = "subject" [value] = "data.value" (change) = "onCheckboxChange($event)">
+            {{data.name}}
           </label>
         </div>
       </td>
       <td>
-        <input type="text" class="form-control" placeholder="Phone number" name = "phoneNumber" [(ngModel)]="studentObj.phoneNumber">
+        <input type="text" class="form-control" placeholder="Phone number" name = "phoneNumber" formControlName="phoneNumber">
       </td>
       <td>
         <h1>You are welcome</h1>
@@ -105,9 +52,12 @@
     </tr>
     <tr>
       <td colspan = "4">
-      <button type="submit" class="btn btn-primary" style="width: 100%;" (click)="addStudents(studentObj)">Submit</button>
+      <button type="submit" class="btn btn-primary" style="width: 100%;" [disabled] = "">Submit</button>
     </td>
     </tr>
   </table>
+</form>
   </div>
+  <p>{{studentReg.status}}</p>
+  
   

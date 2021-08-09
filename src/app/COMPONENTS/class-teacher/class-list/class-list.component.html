@@ -1,22 +1,38 @@
-<h3 class="text-center">{{title}}</h3>
-<div class="flex-row container" *ngFor="let student of students">
-    <div class="profile d-flex flex-row mb-3">
-        <div class="id me-0 pt-2">
-            <p>{{student.regno}}</p>
-        </div>
-        <div class="name p-3" (click)="showProfile = !showProfile">
-        <div class="fname me-3">
-            <p>{{student.fname}}</p>
-        </div>
-        <div class="lname">
-            <p>{{student.lname}}</p>
+<h3 class="text-center">
+    {{title}}
+</h3>
+<div class="main-body ms-3 me-5 container d-flex flex-row flex-content-left">
+    <div class="container">
+        <div class="flex-row d-flex flex-row  mb-3" *ngFor="let student of students" (click)="onSelect(student)">
+            <div class="id me-0 pt-2">
+                <p>{{student.regno}}</p>
+            </div>
+            <div class="name p-3" [class.selected] = "student===selectedStudent">
+                <div class="fname me-3">
+                    <p>{{student.fname}}</p>
+                </div>
+                <div class="lname">
+                    <p>{{student.lname}}</p>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="profile">
+        <div *ngIf="selectedStudent" class="ps-1">
+            <p>Regestration Number: {{selectedStudent.regno}}</p>
+            <p>First Name: {{selectedStudent.fname}}</p>
+            <p>Middle Name: {{selectedStudent.mname}}</p>
+            <p>Last Name: {{selectedStudent.fname}}</p>
+            <p>Gender: {{selectedStudent.gender}}</p>
+            <p>Subjects: {{selectedStudent.subject}}</p>
+            <p>Contacts: {{selectedStudent.phoneNumber}}</p>
+            <img [src]="selectedStudent.photo" alt="profilepic">
+        </div>
     </div>
 </div>
-<app-student-profile *ngIf="showProfile">
 
-</app-student-profile>
+
+
 
 
 
